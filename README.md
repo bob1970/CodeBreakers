@@ -54,8 +54,9 @@ There are usually way to many combinations to combine all the possible word solu
 <br>giraffe
 <br><br>6878
 <br>must, oust
+<br>etc etc...
 
-<br><br>In this case the solution was: 
+<br><b>In this case the solution was:</b> 
 <br>the giraffe must get up at six in the morning if it wants to have its breakfast in its stomach by nine
 
 
