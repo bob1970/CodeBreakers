@@ -50,16 +50,16 @@ There are usually way to many combinations to combine all the possible word solu
 <br><b>Example: </b> LetterPlease.py "843 4472333 6878 438 87 28 749 46 843 6676464 43 48 92687 86 4283 487 273253278 46 487 7866224 29 6463"
 
 <br><b>Output: </b>
-843
+<br>843
 <br>the, tid, tie, vie
 
-4472333
+<br>4472333
 <br>giraffe
 
-6878
+<br>6878
 <br>must, oust
 
-In this case the solution was: 
+<br>In this case the solution was: 
 <br>the giraffe must get up at six in the morning if it wants to have its breakfast in its stomach by nine
 
 
