@@ -30,7 +30,7 @@ NumberToLetters['9'] = ('w','x','y')
 # grab parameters
 if len(sys.argv) < 2:
 	print 'Usage: LetterPlease.py "numeric phrase" '
-	print 'Example: LetterPlease.py "" '
+	print 'Example: LetterPlease.py "843 4472333 6878 438 87 28 749 46 843 6676464 43 48 92687 86 4283 487 273253278 46 487 7866224 29 6463"  '
 	exit()
 
 CodePhrase = sys.argv[1]
