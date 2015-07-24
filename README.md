@@ -60,3 +60,25 @@ There are usually way to many combinations to combine all the possible word solu
 <br>the giraffe must get up at six in the morning if it wants to have its breakfast in its stomach by nine
 
 
+#JumbleSolver.py
+JumbleSolver.py: takes a list of coded words. There are no letter substitutions, the letters have just been scrambled. The script takes each scrambled word and outputs the possible words.
+<br><br><b>Example: </b>JumbleSolver.py "prige rocka deibes thorug"
+<br><b>Output: </b>
+<br>Words for prige :
+<br>=============================================================
+<br>gripe
+<br>
+<br>Words for rocka :
+<br>=============================================================
+<br>croak
+<br>
+<br>Words for deibes :
+<br>=============================================================
+<br>beside
+<br>
+<br>Words for thorug :
+<br>=============================================================
+<br>trough
+<br>If the final answer is a one word answer then just run the key letters thru JumbleSolver.py. If the final answer is more than one word then run WordCracker.py and sift thru the list of words looking for ones the correct words.
+ 
+
