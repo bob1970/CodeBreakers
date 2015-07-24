@@ -9,7 +9,6 @@ A list of puzzles that can be solved with these scripts:
 - 4 Pics 1 Word
 - Scrabble
 
-
 #The Scripts:
 
 #CryptogramSolver.py
@@ -48,18 +47,15 @@ LetterPlease.py: takes a coded NUMERIC phrase as input. Much like the telephone 
 There are usually way to many combinations to combine all the possible word solutions into a possible full solution, so this script just outputs the possible word solution for every numeric coded word.
 
 <br><b>Example: </b> LetterPlease.py "843 4472333 6878 438 87 28 749 46 843 6676464 43 48 92687 86 4283 487 273253278 46 487 7866224 29 6463"
-
 <br><b>Output: </b>
-<br>843
+<br><br>843
 <br>the, tid, tie, vie
-
-<br>4472333
+<br><br>4472333
 <br>giraffe
-
-<br>6878
+<br><br>6878
 <br>must, oust
 
-<br>In this case the solution was: 
+<br><br>In this case the solution was: 
 <br>the giraffe must get up at six in the morning if it wants to have its breakfast in its stomach by nine
 
 
