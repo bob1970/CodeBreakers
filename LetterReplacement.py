@@ -21,7 +21,7 @@ def GetLetters(letter):
 # grab parameters
 if len(sys.argv) < 2:
 	print 'Usage: LetterReplacement.py "code phrase" '
-	print 'Example: LetterReplacement.py "" '
+	print 'Example: LetterReplacement.py "ugf qvsd tjlomd usvsi hr qbsfkx qtqd bme mfufs rjnomf" '
 	exit()
 
 CodePhrase = sys.argv[1].lower()
