@@ -53,13 +53,13 @@ There are usually way to many combinations to combine all the possible word solu
 Word Solutions: 
 
 843
-the, tid, tie, vie
+<br>the, tid, tie, vie
 
 4472333
-giraffe
+<br>giraffe
 
 6878
-must, oust
+<br>must, oust
 
 In this case the solution was: 
 <br>the giraffe must get up at six in the morning if it wants to have its breakfast in its stomach by nine
