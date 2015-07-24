@@ -28,9 +28,9 @@ WordCracker.py: takes a bunch of letters as input and cross references a diction
 LetterReplacement.py: takes a coded phrase as input, the same way CryptogramSolver.py does. This puzzle is a little easier to solve as each Letter Replacement is either the letter BEFORE or AFTER the cipher letter. So if the cipher letter is "c" then the actual letter is either "b" or "d". Unlike a Cryptogram, the letter substitutions are not consistent, so a "c" in one part of the puzzle might be a "b" but in another part of the puzzle a "c" might be a "d".
 
 <b>Example:</b> LetterReplacement.py "ugf qvsd tjlomd usvsi hr qbsfkx qtqd bme mfufs rjnomf"
-<br><b>Output: </b> <br>
-the pure simple truth is rarely pure and lever simple 
-the pure simple truth is rarely pure and never simple
+<br><b>Output: </b>
+<br>the pure simple truth is rarely pure and lever simple 
+<br>the pure simple truth is rarely pure and never simple
 
 #LetterPlease.py
 LetterPlease.py: takes a coded NUMERIC phrase as input. Much like the telephone keypad, each number stands for one of 3 letters. Just like the LetterReplacement puzzle, each number/letter combination in the puzzle is not consistent. So a "2" might be an "a" in one part of the puzzle and later on in the same puzzle a "2" might represent a "c".
@@ -47,7 +47,7 @@ LetterPlease.py: takes a coded NUMERIC phrase as input. Much like the telephone 
 
 There are usually way to many combinations to combine all the possible word solutions into a possible full solution, so this script just outputs the possible word solution for every numeric coded word.
 
-<b>Example: </b> LetterPlease.py "843 4472333 6878 438 87 28 749 46 843 6676464 43 48 92687 86 4283 487 273253278 46 487 7866224 29 6463"
+<br><b>Example: </b> LetterPlease.py "843 4472333 6878 438 87 28 749 46 843 6676464 43 48 92687 86 4283 487 273253278 46 487 7866224 29 6463"
 
 <br><b>Output: </b>
 843
