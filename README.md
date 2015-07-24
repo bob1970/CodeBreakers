@@ -79,6 +79,6 @@ JumbleSolver.py: takes a list of coded words. There are no letter substitutions,
 <br>Words for thorug :
 <br>=============================================================
 <br>trough
-<br>If the final answer is a one word answer then just run the key letters thru JumbleSolver.py. If the final answer is more than one word then run WordCracker.py and sift thru the list of words looking for ones the correct words.
+<br><br>If the final answer is a one word answer then just run the key letters thru JumbleSolver.py. If the final answer is more than one word then run WordCracker.py and sift thru the list of words looking for the correct words.
  
 
