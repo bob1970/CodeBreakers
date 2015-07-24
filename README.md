@@ -43,7 +43,7 @@ Number Letter Substitutions:
 - 7 = p r s
 - 8 = t u v
 - 9 = w x y
-The Code Breakers magazine for some reason does not include the letter q or z in their Letter Please puzzles.
+<br><i>The Code Breakers magazine for some reason does not include the letter q or z in their Letter Please puzzles.</i>
 
 There are usually way to many combinations to combine all the possible word solutions into a possible full solutions, so this script just outputs the possible word solution for every numeric coded word.
 
@@ -62,6 +62,6 @@ giraffe
 must, oust
 
 In this case the solution was: 
-the giraffe must get up at six in the morning if it wants to have its breakfast in its stomach by nine
+<br>the giraffe must get up at six in the morning if it wants to have its breakfast in its stomach by nine
 
 
