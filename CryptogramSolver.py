@@ -51,6 +51,7 @@ fp = open("words.txt", "r")
 TemplateWords = {}
 for FileRow in fp:
 	Word = FileRow.strip()
+	Word = Word.lower()
 	Template = CreateWordTemplate(Word)
 	if Template not in TemplateWords:
 		TemplateWords[Template] = []
