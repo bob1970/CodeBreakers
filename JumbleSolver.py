@@ -11,9 +11,9 @@ WordList = sys.argv[1].lower()
 
 # Load Dictionary
 SortedWords = {}
-fp = open("words.txt", "r")
+fp = open("SOWPODS.txt", "r")
 for FileRow in fp:
-	Word = FileRow.strip()
+	Word = FileRow.strip().lower()
 	SortedLetters = ''.join(sorted(Word))
 	if SortedLetters not in SortedWords:
 		SortedWords[SortedLetters] = []
@@ -25,7 +25,8 @@ for JumbledWord in JumbledWords:
 	print "Words for", JumbledWord, ":"
 	print "============================================================="
 	SortedLetters = ''.join(sorted(JumbledWord))
-	for PossibleWord in SortedWords[SortedLetters]:
-		print PossibleWord
+	if SortedLetters in SortedWords:
+		for PossibleWord in SortedWords[SortedLetters]:
+			print PossibleWord
 	print ""
 
