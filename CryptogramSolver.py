@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import sys
 import re
+import time
 
 #=================================================================================
 # FUNCTIONS
@@ -31,21 +32,28 @@ def PatternMatch(t1, w1, t2, w2):
 				return False
 	return True
 
+def PrintExecutionTime(ts1, ts2):
+	m, s = divmod(ts2 - ts1, 60)
+	h, m = divmod(m, 60)
+	print "Execution Time: %d:%02d:%02d" % (h, m, s)
+	print ""
+
 #=================================================================================
 # PROCESSING
 #=================================================================================
 # grab parameters
 if len(sys.argv) < 2:
-	print 'Usage: CryptogramSolver.py "code phrase" '
+	print 'Usage: CryptogramSolver.py "cipher phrase" '
 	print 'Example: CryptogramSolver.py "alvaml bql vd xol qvbs xv ketsvu kold xolc qlbmeyl xoleq vaedevdt bql vdmc vaedevdt" '
 	exit()
 
 CodePhrase = sys.argv[1].lower()
-print "CodePhrase: "
+print "Cipher Phrase: "
 print CodePhrase
 print ""
 
 # Load Dictionary files...
+ts1 = time.time()
 print "Loading Dictionary..."
 fp = open("words.txt", "r")
 TemplateWords = {}
@@ -56,7 +64,6 @@ for FileRow in fp:
 	if Template not in TemplateWords:
 		TemplateWords[Template] = []
 	TemplateWords[Template].append(Word)
-print "Analyzing Phrase... "
 
 # Initialize Lists and Dictionaries
 CodeWords = []
@@ -64,10 +71,16 @@ PossibleWords = {}
 for CodeWord in (CodePhrase.split()):
 	CodeWords.append(CodeWord)
 
+ts2 = time.time()
+PrintExecutionTime(ts1, ts2)
+
+
 #==========================================================================================
 # Reduce possible letters in each position of each code word... 
 # this will help filter later on when combining all possible words together into one solution
 #==========================================================================================
+ts1 = time.time()
+print "Filtering out words using letter analysis..."
 SecretCode = {}
 for CodeWord in CodeWords:
 	#Start lists for each code letter of code phrase...
@@ -78,7 +91,8 @@ for CodeWord in CodeWords:
 	#Populate lists for each code letter taking care to only record the intersections
 	#for letters that repeat more than once in the phrase
 	PossibleLetters = {}
-	for PossibleWord in TemplateWords[CreateWordTemplate(CodeWord)]:
+	CodeWordTemplate = CreateWordTemplate(CodeWord)
+	for PossibleWord in TemplateWords[CodeWordTemplate]:
 		for i in range(len(CodeWord)):
 			if CodeWord[i] not in PossibleLetters:
 				PossibleLetters[CodeWord[i]] = []
@@ -98,7 +112,8 @@ for CodeWord in CodeWords:
 PossibleWords = {}
 for CodeWord in CodeWords:
 	PossibleWords[CodeWord] = []
-	for PossibleWord in TemplateWords[CreateWordTemplate(CodeWord)]:
+	CodeWordTemplate = CreateWordTemplate(CodeWord)
+	for PossibleWord in TemplateWords[CodeWordTemplate]:
 		#Create RegEx...
 		RegEx = ""
 		for i in range(len(CodeWord)):
@@ -112,10 +127,16 @@ for CodeWord in CodeWords:
 			#print "getting here..."
 			PossibleWords[CodeWord].append(Match.group(0))
 
+ts2 = time.time()
+PrintExecutionTime(ts1, ts2)
+
 #==========================================================================================
 # now we have to pattern match the remaining words based on the pattern of the cryptogram... 
 # this should further filter down the remaining words drastically.
 #==========================================================================================
+ts1 = time.time()
+print "Pattern matching words vs cipher words..."
+
 for i in range(0,len(CodeWords),1):
 	for j in range(i+1,len(CodeWords),1):
 		CodeWord1 = CodeWords[i]
@@ -137,9 +158,14 @@ for i in range(0,len(CodeWords),1):
 			if not MatchFound:
 				PossibleWords[CodeWord2].remove(PossibleWord2)
 
+ts2 = time.time()
+PrintExecutionTime(ts1, ts2)
 #==========================================================================================
 # Put together possible solutions
 #==========================================================================================
+ts1 = time.time()
+print "Assembling solutions and pattern matching possible solutions vs code phrase..."
+
 LoopCount = 0
 CodePhrase = ""
 Solutions = []
@@ -160,10 +186,14 @@ for CodeWord in CodeWords:
 		CodePhrase += "~" + CodeWord 
 		#print CodePhrase, "# Solutions: ", len(Solutions)
 
+ts2 = time.time()
+PrintExecutionTime(ts1, ts2)
+
 print ""
 print "Possible Solutions: "
 print "======================================================================="
 
+print "len(Solutions): ", str(len(Solutions))
 # Now just dump the solutions
 for Solution in Solutions:
 	Phrase = ""
