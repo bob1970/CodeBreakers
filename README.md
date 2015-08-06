@@ -2,7 +2,7 @@
 A collection of Python scripts that help solve puzzles in the "Code Breakers" puzzles and other word puzzles.
 A list of puzzles that can be solved with these scripts:
 - Cryptograms (Dell, Code Breakers)
-- Kriss Kross (Dell, Code Breakers)
+- Crypto-Kross (Dell, Code Breakers)
 - Letter, Please (Dell, Code Breakers)
 - Letter Replacement (Dell, Code Breakers)
 - Jumble (PennyPress) 
